@@ -5,8 +5,6 @@ class Palin
   @start = 0
   @notPalin = 0
   until @start >=@inputLength do
-    puts @inputString[@start]
-    puts @inputString[@inputLength]
     if @inputString[@start]==@inputString[@inputLength]
 
       puts 'MATCH'
@@ -21,5 +19,11 @@ class Palin
     puts 'The word was a palindrome'
   else
     puts 'The word was not a palindrome'
+  end
+
+  if @inputString===@inputString.reverse!
+    puts '.reverse! also works for palindrome checks'
+  else
+    puts '.reverse! also works for determining words that are not palindromes'
   end
 end
