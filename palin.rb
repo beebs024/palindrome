@@ -1,6 +1,8 @@
 class Palin
   puts 'Enter a word to see if it is a palindrome:'
   @inputString = gets
+
+  # palindrome check not using .reverse!
   @inputLength = @inputString.length-2 #-2 because return counts as a character
   @start = 0
   @notPalin = 0
@@ -21,6 +23,7 @@ class Palin
     puts 'The word was not a palindrome'
   end
 
+  #palindrome check using .reverse!
   if @inputString===@inputString.reverse!
     puts '.reverse! also works for palindrome checks'
   else
